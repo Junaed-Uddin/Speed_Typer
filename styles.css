@@ -17,8 +17,9 @@ body {
 }
 
 #question {
-  height: 100px;
+  height: 120px;
   display: flex;
+  padding: 40px;
   align-items: center;
   justify-content: center;
   color: white;
@@ -88,7 +89,8 @@ body {
 #show-time {
   text-align: center;
   color: white;
-  margin: 10px 0;
+  margin: 20px 0;
+  font-size: 18px;
 }
 
 .green {
