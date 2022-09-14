@@ -176,8 +176,8 @@ button {
   margin-bottom: 30px;
 }
 
-#card-gap {
-  margin-top: 2rem;
+.card-gap {
+  margin-top: 10px;
 }
 
 #modal-background {
