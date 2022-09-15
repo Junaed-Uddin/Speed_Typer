@@ -4,12 +4,115 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Blogs</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
+    <header class="container">
+        <h3 class="text-center my-5 h2">Four Questions-</h3>
+    </header>
+    <main>
+        <section>
+            <div class="container mt-5">
+                <!-- q-1  -->
+                <div>
+                    <h6 class="mb-3 h5">Q-1. What are differences between local Storage and session storage?</h6>
+                    <table class="table table-bordered text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">Local Storage</th>
+                                <th scope="col">Session Storage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Data in localStorage doesn't expire until the user manually clears the browser cache
+                                    or
+                                    until your web app clears the data.</td>
+                                <td>It stores data in browser for a session, but data is cleared when the page or
+                                    browser is
+                                    closed</td>
+                            </tr>
+                            <tr>
+                                <td>It stores 10mb data for most browsers</td>
+                                <td>It stores 5mb data</td>
+                            </tr>
+                            <tr>
+                                <td>Data is available for future sessions</td>
+                                <td>Data is not available for future sessions</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- q-2  -->
+                <div class="mt-5">
+                    <h6 class="mb-3 h5">Q-2. What are differences between global scope and block scope?</h6>
+                    <table class="table table-bordered text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">Global Scope</th>
+                                <th scope="col">Local Scope</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>In javascript, the whole document is global scope and all the other functions and
+                                    variables are contained in this global scope.</td>
+                                <td>A variable when declared inside the if or switch conditions or inside for or while
+                                    loops, are accessible within that particular condition or loop.</td>
+                            </tr>
+                            <tr>
+                                <td>It can be accessed from any part of that program, any function or conditional state
+                                    can access that variable.</td>
+                                <td>Variables declared inside a { } block cannot be accessed from outside the block</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- q-3  -->
+                <div class="mb-5">
+                    <h6 class="mb-3 h5 mt-5">Q-3. How does JavaScript event loop work?</h6>
+                    <div class="card p-4" style="font-size: 16px;">
+                        <p><span class="fw-bold"> JavaScript is single threaded. So, it needs event loop to run
+                                asynchronous (Multi Thread) code- </span></p>
+                        <ul>
+                            <li>JavaScript first runs synchronous code, then it queue asynchronous code to call later.
+                            </li>
+                            <li> Asynchronous code is called/executed by event loop.</li>
+                            <li>System/Browser takes synchronous code and put them as tasks. then these tasks are put
+                                them
+                                into queue.</li>
+                            <li>The Event Loop has one simple job — to monitor is there any task to handle.</li>
+                            <li>System/Browser push the task to call stack.</li>
+                            <li>Then the event loop will check the call stack and execute the task.</li>
+                            <li>Then it waits for the next task to be pushed to the call stack.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- q-4  -->
+                <div class="mb-5">
+                    <h6 class="mb-3 h5 mt-5">Q-4. How many ways to get undefined?</h6>
+                    <div class="card p-4">
+                        <p class="fw-bold">8 different ways to get undefined - </p>
+                        <ol>
+                            <li>Variable that is not initialized</li>
+                            <li>Function with no return</li>
+                            <li>Parameter that is not passed in the function call will be undefined</li>
+                            <li>If return has nothing on the right side will return undefined</li>
+                            <li>Property that doesn't exists on an object will give you undefined</li>
+                            <li>Accessing array elements outside of the index range will give you undefined</li>
+                            <li>Deleting an element inside an array</li>
+                            <li>Set a value directly to undefined</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
