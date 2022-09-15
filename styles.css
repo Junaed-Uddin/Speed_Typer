@@ -65,10 +65,11 @@ body {
 }
 #result { 
   position: fixed;
+  font-size: 16px;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 270px;
+  height: 300px;
   width: 430px;
   background-color: #171717;
   border-radius: 15px;
@@ -79,12 +80,18 @@ body {
 }
 
 .modal-time-gap {
-  padding: 10px 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .modal-error-gap {
-  padding: 6px 0;
-  margin-bottom: 12px;
+  padding-top: 4px;
+  padding-bottom: 10px;
+}
+
+.modal-wpm-gap {
+  padding: 4px 0;
+  padding-bottom: 20px;
 }
 
 #closeModal{
@@ -96,6 +103,10 @@ body {
   color: white;
   margin: 20px 0;
   font-size: 18px;
+}
+
+.blue{
+  color: rgb(143, 143, 255);
 }
 
 .green {

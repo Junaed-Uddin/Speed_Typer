@@ -88,9 +88,9 @@ const gameOver = () => {
   // show result
   resultModal.innerHTML += `
     <h1>Finished!</h1>
-    <p class="modal-time-gap">You took: <span class="bold">${timeTaken}</span> seconds</p>
+    <p class="modal-time-gap">You took: <span class="bold blue">${timeTaken}</span> seconds</p>
     <p class="modal-error-gap">You made <span class="bold red">${errorCount}</span> mistakes</p>
-    <p class="modal-error-gap">WPM: <span class="bold green">${wPm}</span></p>
+    <p class="modal-wpm-gap">Your type speed: <span class="bold green">${wPm}</span> WPM</p>
     <button id="closeModal" class="modal-text-gap" onclick="closeModal()">Close</button>
   `;
   addHistory(questionText, timeTaken, errorCount, wPm);
