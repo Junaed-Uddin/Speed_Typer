@@ -63,7 +63,7 @@ body {
   color: white;
   display: none;
 }
-#result {
+#result { 
   position: fixed;
   top: 40%;
   left: 50%;
