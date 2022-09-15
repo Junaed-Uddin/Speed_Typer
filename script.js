@@ -8,6 +8,7 @@ const modalBackground = document.getElementById("modal-background");
 // variables
 let userText = "";
 let errorCount = 0;
+let wordCount = 0;
 let startTime;
 let questionText = "";
 
@@ -44,6 +45,7 @@ const typeController = (e) => {
 
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
+    wordCount++;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
     errorCount++;
@@ -69,6 +71,7 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = ((finishTime - startTime) / 1000).toFixed();
+  // const wPm = wordCount
 
   // show result modal
   resultModal.innerHTML = "";
@@ -83,7 +86,8 @@ const gameOver = () => {
     <h1>Finished!</h1>
     <p class="modal-time-gap">You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p class="modal-error-gap">You made <span class="bold red">${errorCount}</span> mistakes</p>
-    <button class="modal-text-gap" onclick="closeModal()">Close</button>
+    <p class="modal-error-gap">WPM: <span class="bold red">${wordCount}</span></p>
+    <button id="closeModal" class="modal-text-gap" onclick="closeModal()">Close</button>
   `;
 
   addHistory(questionText, timeTaken, errorCount);

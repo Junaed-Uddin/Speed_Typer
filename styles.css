@@ -36,16 +36,17 @@ body {
 }
 
 #display {
-  height: 100px;
+  overflow-y: auto;
+  height: 140px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-left: 5rem;
+  padding: 0.8rem 1.3rem;
   color: white;
   font-size: 32px;
   background-color: #171717;
   border: 2px solid #9dffad;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 #countdown {
@@ -67,8 +68,8 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 250px;
-  width: 400px;
+  height: 270px;
+  width: 430px;
   background-color: #171717;
   border-radius: 15px;
   border: 2px solid #9dffad;
@@ -84,6 +85,10 @@ body {
 .modal-error-gap {
   padding: 6px 0;
   margin-bottom: 12px;
+}
+
+#closeModal{
+  margin-bottom: 10px;
 }
 
 #show-time {
@@ -214,6 +219,9 @@ button {
 }
 
 @media only screen and (max-width: 576.98px) {
+  #question {
+    height: auto;
+  }
   #histories {
     grid-template-columns: repeat(1, 1fr);
   }
