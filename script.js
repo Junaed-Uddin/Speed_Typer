@@ -106,17 +106,16 @@ const start = () => {
 
   let count = 3;
   countdownOverlay.style.display = "flex";
-
+  countdownOverlay.textContent = '';
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
     // finished timer
-    if (count == 0) {
+    if (count < 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
-
       clearInterval(startCountdown);
       startTime = new Date().getTime();
     }
@@ -138,3 +137,9 @@ setInterval(() => {
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
 }, 1000);
+
+
+// prevent space scroll fixed 
+window.onkeydown = function (e) {
+  return !(e.keyCode == 32 && e.target == document.body);
+}; 

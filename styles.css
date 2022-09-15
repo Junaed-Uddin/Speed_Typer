@@ -17,7 +17,7 @@ body {
 }
 
 #question {
-  height: 120px;
+  height: 100px;
   display: flex;
   padding: 40px;
   align-items: center;
